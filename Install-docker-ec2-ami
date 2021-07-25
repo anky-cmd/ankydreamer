@@ -1,11 +1,25 @@
 - 👋How To Install (Docker) On AWS EC2 AMI
-- �To install Docker On EC2 Instance you should follow following process.
-- 
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+To install Docker On EC2 Instance you should follow following process.
 
-<!---
-ankydreamer/ankydreamer is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+- Update packages on your instance.
+[ec2-user ~]$ sudo yum update -y
+
+- Install Docker
+[ec2-user ~]$ sudo yum install docker -y
+
+- Start the Docker Service
+[ec2-user ~]$ systemctl start docker
+
+- Stop the docker service
+[ec2-user ~]$ systemctl Stop docker
+
+- Restarting and Reloading
+[ec2-user ~]$ systemctl restart docker
+[ec2-user ~]$ systemctl reload docker
+
+To start the service at boot, use enable command
+[ec2-user ~]$ systemctl enable docker
+
+-
+
+
